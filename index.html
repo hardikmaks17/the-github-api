@@ -37,19 +37,19 @@
 
 		<!-- Begin: Header -->
 		<nav
-			class="m-navbar border-bottom w-100 d-flex flex-wrap justify-content-between align-items-center navbar-dark px-4">
+			class="m-navbar border-bottom w-100 d-flex flex-wrap justify-content-between align-items-center navbar-dark  px-4">
 			<div>
 				<a class="navbar-brand text-white" href="#">{ The GitHub API }</a>
 			</div>
-			<!-- Begin: Header -->
+			<!-- Begin: Navtabs -->
 			<div class="border border-secondary w-50">
 				<nav class="m-nav" style="width: 100%;">
 					<ul class="nav nav-tabs nav-justified">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Repositories</a>
+							<a class="nav-link text-white" aria-current="page" href="#">Repositories</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Followers</a>
+							<a class="nav-link active" href="#">Followers</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-white" href="#">Following</a>
@@ -57,15 +57,10 @@
 					</ul>
 				</nav>
 			</div>
-			<!-- Begin: Header -->
+			<!-- End: Navtabs -->
 			<div class="d-flex align-items-center text-white">
-				<!-- <i class="bi bi-person-fill fs-4 mx-2"></i> -->
-				<!-- <i class="bi bi-person-badge fs-4 mx-2"></i> -->
-				<!-- <i class="bi bi-person-square fs-4 mx-2"></i> -->
-				<!-- <i class="bi bi-person-circle fs-4 mx-2"></i> -->
-				<!-- <i class="bi bi-person-bounding-box fs-4 mx-2"></i> -->
-				<span class="border-bottom">hardikmaks17</span>
-				<img src="https://avatars.githubusercontent.com/u/62656236?v=4"
+				<span class="border-bottom" id="navbar-username"></span>
+				<img src="" id="navbar-photo"
 					class="mx-2 border border-2 rounded-circle" alt="..." style="width: 30px;">
 			</div>
 		</nav>
@@ -74,38 +69,37 @@
 		<div class="d-flex" style="height: 91vh;">
 
 			<!-- Begin: Profile Overview Section -->
-			<div class="profile-overview border-end text-light">
+			<div class="profile-overview border-end text-light" id="profile-overview">
 
 
 				<!-- Begin: Profile -->
 				<div class="card bg-dark text-light mt-4 mx-4">
 					<div class="bg-dark bg-gradient d-flex justify-content-center">
-						<img src="https://avatars.githubusercontent.com/u/62656236?v=4" class="rounded" alt="..."
+						<img src="" id="profile-photo" alt="..."
 							style="width:15em">
 					</div>
 					<div class="card-body bg-gradient">
-						<h5 class="card-title d-flex align-items-center mt-2 mb-3"><span class="me-2">Hardik Makwana</span><small class="opacity-75 fw-light">[
-								hardikmaks17 ]</small></h5>
-						<p class="card-text">Front-End Web Development | Traveler</p>
+						<h5 class="card-title d-flex align-items-center mt-2 mb-3"><span class="me-2" id="profile-name"></span><small class="opacity-75 fw-light">[
+								<span id="profile-username"></span> ]</small></h5>
+						<span class="" id="profile-bio"></span>
 					</div>
 					<ul class="list-group ps-1">
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-people-fill me-2"></i>5 Followers
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-people-fill me-2"></i><span id="profile-followers"></span> Followers
 						</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-person-lines-fill me-2"></i>12
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-person-lines-fill me-2"></i><span id="profile-following"></span>
 							Following</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-bookmarks-fill me-2"></i>18
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-bookmarks-fill me-2"></i><span id="profile-repositories"></span>
 							Repositories</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-bookmark-star me-2"></i>4 Starred
+						<!-- <li class="list-group-item bg-dark text-white"><i class="bi bi-bookmark-star me-2"></i><span id="profile-starred"></span> Starred
+						</li> -->
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-geo-alt-fill me-2"></i><span id="profile-location"></span>
 						</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-calendar me-2"></i>17 January, 2020</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-geo-alt-fill me-2"></i>Vadodara,
-							Gujarat, India
-						</li>
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-calendar-fill me-2"></i><span id="profile-created"></span></li>
 					</ul>
 					<div class="card-body d-flex justify-content-between px-4 bg-gradient">
-						<a href="#" class="card-link text-warning text-decoration-none">Website</a>
-						<a href="#" class="card-link text-warning text-decoration-none">GitHub</a>
-						<a href="#" class="card-link text-warning text-decoration-none">Twitter</a>
+						<a href="" id="profile-website" class="card-link text-warning text-decoration-none" target="_blank">Website</a>
+						<a href="" id="profile-github" class="card-link text-warning text-decoration-none" target="_blank">GitHub</a>
+						<a href="" id="profile-twitter" class="card-link text-warning text-decoration-none" target="_blank">Twitter</a>
 					</div>
 				</div>
 				<!-- End: Profile -->
@@ -114,31 +108,14 @@
 			<!-- End: Profile Overview Section -->
 
 			<!-- Begin: Full Profile -->
-			<div class="full-profile flex-grow-1 overflow-auto">
+			<div class="full-profile flex-fill overflow-auto">
 
 				<!-- Begin: Repositories -->
-				<div class="repo-container mt-4 px-4" id="">
-					<div class="card bg-transparent border-secondary text-white mb-3">
-						<div class="card-body">
-							<h5 class="card-title"><span class="me-1">1</span><span class="me-2 align-text-top">)</span>free-code-camp</h5>
-							<p class="card-text mt-3">This repository contains source code of every solution I have made at freeCodeCamp. (https://www.freecodecamp.org/learn)</p>
-						</div>
-						<div class="card-footer border-secondary d-flex justify-content-between">
-							<div>
-								<small class="opacity-50 me-3"><i class="bi bi-circle-fill me-2"></i>Jupyter Notebook</small>
-								<small class="opacity-50 me-3">Last updated 3 mins ago</small>
-							</div>
-							<div>
-								<small class="opacity-50 me-3"><i class="far fa-eye me-2"></i>5 Views</small>
-								<small class="opacity-50 me-3"><i class="fas fa-code-branch me-2"></i>2 Forks</small>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="repo-container mt-4 px-4" id="repo-container"></div>
 				<!-- End: Repositories -->
 
 				<!-- Begin: Followers -->
-				<!-- <div class="follower-container mt-4 px-4">
+				<div class="follower-container mt-4 px-4" id="follower-container">
 					<div class="card bg-transparent border-secondary text-white mb-3">
 						<div class="row g-0">
 							<div class="col-md-2 d-flex justify-content-center align-items-center">
@@ -164,7 +141,7 @@
 							</div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 				<!-- End: Followers -->
 
 				<!-- Begin: Followings -->
@@ -219,8 +196,8 @@
 	<!-- JavaScript Files -->
 	<script type="text/javascript" src="assets/js/config.js"></script>
 	<!-- <script type="text/javascript" src="assets/js/advance.js"></script> -->
-	<!-- <script type="text/javascript" src="assets/js/profile.js"></script> -->
-	<!-- <script type="text/javascript" src="assets/js/repository.js"></script> -->
+	<script type="text/javascript" src="assets/js/profile.js"></script>
+	<script type="text/javascript" src="assets/js/repository.js"></script>
 	<script type="text/javascript" src="assets/js/follower.js"></script>
 	<!-- <script type="text/javascript" src="assets/js/following.js"></script> -->
 
