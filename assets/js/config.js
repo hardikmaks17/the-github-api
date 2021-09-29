@@ -16,7 +16,7 @@ function getData(username) {
         navbarPhoto.src = `${data.avatar_url}`;
 
         console.warn("--- User Data fetched successfully!");
-        console.log(data);
+        console.log("User Api Data:", data);
         return userProfile(data);
     }).catch((error) => {
         console.log(error);
