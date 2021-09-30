@@ -51,13 +51,12 @@ function getFollowerData(followerUsername) {
 // function to extrat followers data 
 function userFollowers(follower) {
     // console.log('Function called: userFollowers()');
-    // console.error(follower);
     console.log("\n");
     console.warn(`--- Followers fetched successfully!`);
+    
     // List of followers
-    let username, array = [];
+    let username;
     for(let i=0; i < follower.length; i++) {
-        //* Follower object 
         username = follower[i].login;
         getFollowerData(username);
     }

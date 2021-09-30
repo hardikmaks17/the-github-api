@@ -23,9 +23,8 @@ function userRepositories(repo) {
     
     // List of repositories
     let html = "";
-    repo.forEach((element, index) => {
-        
-        console.log(element);
+    repo.forEach((element, index) => {       
+        console.log("Repositories Api Data:", element);
         html += `
         <div class="card bg-transparent border-secondary text-white mb-3">
             <div class="card-body">

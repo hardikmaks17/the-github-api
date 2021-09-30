@@ -11,13 +11,11 @@
 	<title>The GitHub Api</title>
 
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<!-- External StyleSheets -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -32,12 +30,9 @@
 
 	<!-- Begin - MAIN Part -->
 	<main class="main vh-100" id="main">
-
-		<!-- Begin: Main Container -->
-
+		
 		<!-- Begin: Header -->
-		<nav
-			class="m-navbar border-bottom w-100 d-flex flex-wrap justify-content-between align-items-center navbar-dark  px-4">
+		<nav class="m-navbar border-bottom w-100 d-flex flex-wrap justify-content-between align-items-center navbar-dark  px-4">
 			<div>
 				<a class="navbar-brand text-white" href="#">{ The GitHub API }</a>
 			</div>
@@ -45,69 +40,47 @@
 			<div class="border border-secondary w-50">
 				<nav class="m-nav" style="width: 100%;">
 					<ul class="nav nav-tabs nav-justified">
-						<li class="nav-item">
-							<a class="nav-link text-white" aria-current="page" href="#">Repositories</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="#">Followers</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Following</a>
-						</li>
+						<li class="nav-item"><a class="nav-link text-white" aria-current="page" href="#">Repositories</a></li>
+						<li class="nav-item"><a class="nav-link active" href="#">Followers</a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="#">Following</a></li>
 					</ul>
 				</nav>
 			</div>
 			<!-- End: Navtabs -->
 			<div class="d-flex align-items-center text-white">
 				<span class="border-bottom" id="navbar-username"></span>
-				<img src="" id="navbar-photo" class="mx-2 border border-2 rounded-circle" alt="..."
-					style="width: 30px;">
+				<img src="" id="navbar-photo" class="mx-2 border border-2 rounded-circle" alt="..." style="width: 30px;">
 			</div>
 		</nav>
 		<!-- End: Header -->
-
+		
+		<!-- Begin: Main Container -->
 		<div class="d-flex" style="height: 91vh;">
 
 			<!-- Begin: Profile Overview Section -->
 			<div class="profile-overview border-end text-light" id="profile-overview">
 
-
 				<!-- Begin: Profile -->
 				<div class="card bg-dark text-light mt-4 mx-4">
 					<div class="bg-dark bg-gradient d-flex justify-content-center">
-						<img src="" id="profile-photo" alt="..." style="width:15em">
+						<img src="" id="profile-photo" alt="profile photo" style="width:15em">
 					</div>
 					<div class="card-body bg-gradient">
-						<h5 class="card-title d-flex align-items-center mt-2 mb-3"><span class="me-2"
-								id="profile-name"></span><small class="opacity-75 fw-light">[
-								<span id="profile-username"></span> ]</small></h5>
+						<h5 class="card-title d-flex align-items-center mt-2 mb-3"><span class="me-2" id="profile-name"></span><small class="opacity-75 fw-light">[ <span id="profile-username"></span> ]</small></h5>
 						<span class="" id="profile-bio"></span>
 					</div>
 					<ul class="list-group ps-1">
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-people-fill me-2"></i><span
-								id="profile-followers"></span> Followers
-						</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-person-lines-fill me-2"></i><span
-								id="profile-following"></span>
-							Following</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-bookmarks-fill me-2"></i><span
-								id="profile-repositories"></span>
-							Repositories</li>
-						<!-- <li class="list-group-item bg-dark text-white"><i class="bi bi-bookmark-star me-2"></i><span id="profile-starred"></span> Starred
-						</li> -->
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-geo-alt-fill me-2"></i><span
-								id="profile-location"></span>
-						</li>
-						<li class="list-group-item bg-dark text-white"><i class="bi bi-calendar-fill me-2"></i><span
-								id="profile-created"></span></li>
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-people-fill me-2"></i><span id="profile-followers"></span> Followers</li>
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-person-lines-fill me-2"></i><span id="profile-following"></span> Following</li>
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-bookmarks-fill me-2"></i><span id="profile-repositories"></span> Repositories</li>
+						<!-- <li class="list-group-item bg-dark text-white"><i class="bi bi-bookmark-star me-2"></i><span id="profile-starred"></span> Starred</li> -->
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-geo-alt-fill me-2"></i><span id="profile-location"></span></li>
+						<li class="list-group-item bg-dark text-white"><i class="bi bi-calendar-fill me-2"></i><span id="profile-created"></span></li>
 					</ul>
 					<div class="card-body d-flex justify-content-between px-4 bg-gradient">
-						<a href="" id="profile-website" class="card-link text-warning text-decoration-none"
-							target="_blank">Website</a>
-						<a href="" id="profile-github" class="card-link text-warning text-decoration-none"
-							target="_blank">GitHub</a>
-						<a href="" id="profile-twitter" class="card-link text-warning text-decoration-none"
-							target="_blank">Twitter</a>
+						<a href="" id="profile-website" class="card-link text-warning text-decoration-none" target="_blank">Website</a>
+						<a href="" id="profile-github" class="card-link text-warning text-decoration-none" target="_blank">GitHub</a>
+						<a href="" id="profile-twitter" class="card-link text-warning text-decoration-none" target="_blank">Twitter</a>
 					</div>
 				</div>
 				<!-- End: Profile -->
@@ -127,34 +100,7 @@
 				<!-- End: Followers -->
 
 				<!-- Begin: Followings -->
-				<div class="following-container mt-4 px-4">
-					<div class="card bg-transparent border-secondary text-white mb-3">
-						<div class="row g-0">
-							<div class="col-md-2 d-flex justify-content-center align-items-center">
-								<img src="https://avatars.githubusercontent.com/u/8105936?v=4"
-									class="img-fluid rounded-circle" alt="..." style="width: 100px;">
-							</div>
-							<div class="col-md-10">
-								<div class="card-body">
-									<h5 class="card-title">Jyotsna Gupta<i
-											class="bi bi-patch-check text-warning ms-2"></i><small
-											class="opacity-75 fw-light ms-3">imjenal</small></h5>
-									<p class="card-text text-truncate">Senior Software Engineer at Gojek | FOSS
-										Enthusiast | Tech Speaker at Mozilla | Mozilla Representative | Add-ons Content
-										Reviewer at Mozilla</p>
-									<div class="d-flex">
-										<small class="opacity-75 me-4"><i class="bi bi-geo-alt-fill me-2"></i>Bangalore,
-											India</small>
-										<small class="opacity-75 me-3"><i class="bi bi-people-fill me-2"></i>80
-											Followers</small>
-										<small class="opacity-75 me-3"><i class="bi bi-person-lines-fill me-2"></i>13
-											Following</small>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="following-container mt-4 px-4" id="following-container"></div>
 				<!-- End: Followings -->
 
 			</div>
@@ -171,17 +117,15 @@
 	<!-- End - FOOTER Part -->
 
 	<!-- Bootstrap Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 	<!-- JavaScript Files -->
-	<!-- <script type="text/javascript" src="assets/js/config.js"></script> -->
+	<script type="text/javascript" src="assets/js/config.js"></script>
 	<!-- <script type="text/javascript" src="assets/js/advance.js"></script> -->
-	<!-- <script type="text/javascript" src="assets/js/profile.js"></script> -->
-	<!-- <script type="text/javascript" src="assets/js/repository.js"></script> -->
-	<!-- <script type="text/javascript" src="assets/js/follower.js"></script> -->
-	<!-- <script type="text/javascript" src="assets/js/following.js"></script> -->
+	<script type="text/javascript" src="assets/js/profile.js"></script>
+	<script type="text/javascript" src="assets/js/repository.js"></script>
+	<script type="text/javascript" src="assets/js/follower.js"></script>
+	<script type="text/javascript" src="assets/js/following.js"></script>
 
 </body>
 
