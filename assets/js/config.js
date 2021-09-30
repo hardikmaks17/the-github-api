@@ -25,3 +25,60 @@ function getData(username) {
 
 // fetching data
 getData(username);
+
+let repoContainer = document.getElementById('repo-container');
+let followerContainer = document.getElementById('follower-container');
+let followingContainer = document.getElementById('following-container');
+let navitemRepositories = document.getElementById('navitem-repositories');
+let navitemFollowers = document.getElementById('navitem-followers');
+let navitemFollowing = document.getElementById('navitem-following');
+let navlinkRepositories = document.getElementById('navlink-repositories');
+let navlinkFollowers = document.getElementById('navlink-followers');
+let navlinkFollowing = document.getElementById('navlink-following');
+followerContainer.style.display = "none";
+followingContainer.style.display = "none";
+
+navitemRepositories.addEventListener('click', () => {
+    // navtab behaviour
+    navlinkRepositories.classList.add('active');
+    navlinkRepositories.classList.remove('text-white');
+    navlinkFollowers.classList.add('text-white');
+    navlinkFollowers.classList.remove('active');
+    navlinkFollowing.classList.add('text-white');
+    navlinkFollowing.classList.remove('active');
+    
+    // DOM behaviour
+    repoContainer.style.display = "inherit";
+    followerContainer.style.display = "none";
+    followingContainer.style.display = "none";
+});
+
+navitemFollowers.addEventListener('click', () => {
+    // navtab behaviour
+    navlinkFollowers.classList.add('active');
+    navlinkFollowers.classList.remove('text-white');
+    navlinkRepositories.classList.add('text-white');
+    navlinkRepositories.classList.remove('active');
+    navlinkFollowing.classList.add('text-white');
+    navlinkFollowing.classList.remove('active');
+    
+    // DOM behaviour
+    followerContainer.style.display = "inherit";
+    repoContainer.style.display = "none";
+    followingContainer.style.display = "none";
+});
+
+navitemFollowing.addEventListener('click', () => {
+    // navtab behaviour
+    navlinkFollowing.classList.add('active');
+    navlinkFollowing.classList.remove('text-white');
+    navlinkRepositories.classList.add('text-white');
+    navlinkRepositories.classList.remove('active');
+    navlinkFollowers.classList.add('text-white');
+    navlinkFollowers.classList.remove('active');
+    
+    // DOM behaviour
+    followingContainer.style.display = "inherit";
+    repoContainer.style.display = "none";
+    followerContainer.style.display = "none";
+});

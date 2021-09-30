@@ -40,9 +40,9 @@
 			<div class="border border-secondary w-50">
 				<nav class="m-nav" style="width: 100%;">
 					<ul class="nav nav-tabs nav-justified">
-						<li class="nav-item"><a class="nav-link text-white" aria-current="page" href="#">Repositories</a></li>
-						<li class="nav-item"><a class="nav-link active" href="#">Followers</a></li>
-						<li class="nav-item"><a class="nav-link text-white" href="#">Following</a></li>
+						<li class="nav-item" id="navitem-repositories"><a class="nav-link active" href="#repo-container" id="navlink-repositories">Repositories</a></li>
+						<li class="nav-item" id="navitem-followers"><a class="nav-link text-white" href="#follower-container" id="navlink-followers">Followers</a></li>
+						<li class="nav-item" id="navitem-following"><a class="nav-link text-white" href="#following-container" id="navlink-following">Following</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -92,15 +92,15 @@
 			<div class="full-profile flex-fill overflow-auto">
 
 				<!-- Begin: Repositories -->
-				<div class="repo-container mt-4 px-4" id="repo-container"></div>
+				<div class="repo-container pt-4 px-4" id="repo-container"></div>
 				<!-- End: Repositories -->
 
 				<!-- Begin: Followers -->
-				<div class="follower-container mt-4 px-4" id="follower-container"></div>
+				<div class="follower-container pt-4 px-4" id="follower-container"></div>
 				<!-- End: Followers -->
 
 				<!-- Begin: Followings -->
-				<div class="following-container mt-4 px-4" id="following-container"></div>
+				<div class="following-container pt-4 px-4" id="following-container"></div>
 				<!-- End: Followings -->
 
 			</div>
