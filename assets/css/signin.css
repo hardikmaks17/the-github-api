@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}

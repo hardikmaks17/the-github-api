@@ -1,7 +1,14 @@
 console.log("Here, I am : config.js");
 
 // username of github user
-const username = "hardikmaks17";
+let username;
+if(localStorage.getItem('GitHub_Username')) {
+    username = localStorage.getItem('GitHub_Username');
+}
+else {
+    username = sessionStorage.getItem('GitHub_Username');
+}
+console.log("Config Username :", username);
 
 // function to fetch user data from api
 function getData(username) {
