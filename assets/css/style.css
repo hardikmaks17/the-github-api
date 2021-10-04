@@ -10,8 +10,8 @@
 
 /* Begin - Testing Work */
 
-/* #header, #main, #footer {
-    border: 1px dashed #f00;
+/* * {
+    border: 1px dashed #fff;
 } */
 
 /* End - Testing Work */
@@ -24,27 +24,54 @@
 
 /* Begin - Main Part */
 
-    body {
-        height: 100vh;
-    }
-
     /* Begin: Main Container */
-        .m-navbar {
-            height: 8.5vh;
-            /* background-color: #414548; */
+        .main-container {
+            background-color: #313638;
         }
         .profile-overview {
             min-width: 24vw;
-            max-width: 28vw;
             height: 100%;
-            /* background-color: #2e3133; */
-            background-color: #313638;
         }
-        .full-profile {
-            background-color: #313638;
+        @media screen and (min-width: 768px) {   
+            .m-navbar {
+                height: 8.5vh;
+            }
+            .main-container {
+                height: 91vh;
+            }
         }
-        .m-repo-title {
-            font-size: 1.2em;
+        @media screen and (max-width: 768px) {
+            .m-navbar {
+                padding: 1em;
+            }
+            .m-navbar > * {
+                border: 1px solid #fff;
+                width: 100%;
+                margin: 0.5em 0;
+                text-align: center;
+            }
+            .profile-overview {
+                border: unset !important;
+            }
+            .full-profile .card:last-child {
+                margin-bottom: 1.5em !important;
+            }
+        }
+        @media screen and (max-width: 575px) {
+            .profile-overview {
+                padding: unset !important;
+                margin: 1em 0;
+                width: 100%;
+            }
+            .full-profile {
+                padding: unset !important;
+            }
+            .full-profile .card {
+                border: unset;
+                border-radius: unset;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+            }
         }
     /* End: Main Container */
 

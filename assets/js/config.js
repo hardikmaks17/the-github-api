@@ -19,7 +19,7 @@ function getData(username) {
     }).then((data) => {
         let navbarUsername = document.getElementById('navbar-username');
         let navbarPhoto = document.getElementById('navbar-photo');
-        navbarUsername.innerHTML = data.name;
+        navbarUsername.innerHTML = data.name.toLowerCase();
         navbarPhoto.src = `${data.avatar_url}`;
 
         console.warn("--- User Data fetched successfully!");

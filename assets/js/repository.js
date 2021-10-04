@@ -28,7 +28,7 @@ function userRepositories(repo) {
         html += `
         <div class="card bg-transparent border-secondary text-white mb-3">
             <div class="card-body">
-                <a href="${element.html_url}" target="_blank" class="m-repo-title card-title text-decoration-none fw-bold text-info"><span class="me-1 font-monospace">${index+1}</span><span class="me-2">)</span>${element.name}</a>
+                <a href="${element.html_url}" target="_blank" class="h5 card-title text-decoration-none text-info"><span class="me-1 font-monospace">${index+1}</span><span class="me-2">)</span>${element.name}</a>
                 <p class="card-text mt-3">${element.description}</p>
             </div>
             <div class="card-footer border-secondary d-flex justify-content-between">

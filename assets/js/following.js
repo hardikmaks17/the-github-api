@@ -26,17 +26,17 @@ function getFollowingData(followingUsername) {
         let html = `
         <div class="card bg-transparent border-secondary text-white mb-3">
             <div class="row g-0">
-                <div class="col-md-2 d-flex justify-content-center align-items-center">
-                    <img src="${data.avatar_url}" class="img-fluid rounded-circle" alt="..." style="width: 100px;">
+                <div class="col-sm-2 d-flex justify-content-center align-items-center">
+                    <img src="${data.avatar_url}" class="img-fluid rounded-circle ms-3 my-2" alt="..." style="width: 100px;">
                 </div>
-                <div class="col-md-10">
+                <div class="col-sm-10">
                     <div class="card-body">
                         <h5 class="card-title">${data.name}<i class="bi bi-patch-check text-warning ms-2"></i><small class="opacity-75 fw-light ms-3">${data.login}</small></h5>
-                        <p class="card-text text-truncate">${data.bio}</p>
+                        <p class="card-text">${data.bio}</p>
                         <div class="d-flex">
                             <small class="opacity-75 me-4"><i class="bi bi-geo-alt-fill me-2"></i>${data.location}</small>
-                            <small class="opacity-75 me-3"><i class="bi bi-people-fill me-2"></i>${data.followers} Followers</small>
-                            <small class="opacity-75 me-3"><i class="bi bi-person-lines-fill me-2"></i>${data.following} Following</small>
+                            <small class="opacity-75 me-4"><i class="bi bi-people-fill me-2"></i>${data.followers} Followers</small>
+                            <small class="opacity-75 me-4"><i class="bi bi-person-lines-fill me-2"></i>${data.following} Following</small>
                         </div>
                     </div>
                 </div>

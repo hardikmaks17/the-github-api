@@ -29,45 +29,51 @@
 	<!-- End - HEADER Part -->
 
 	<!-- Begin - MAIN Part -->
-	<main class="main vh-100" id="main">
+	<main class="main" id="main">
 		
 		<!-- Begin: Header -->
-		<nav class="m-navbar border-bottom w-100 d-flex flex-wrap justify-content-between align-items-center navbar-dark px-4">
-			<div>
-				<a class="navbar-brand text-white" href="#">{ The GitHub API }</a>
+		<nav class="m-navbar d-flex flex-column flex-md-row flex-wrap justify-content-between align-items-center navbar-dark px-4">
+			
+			<!-- Begin: Navbrand -->
+			<div class="flex-fill ">
+				<a class="navbar-brand text-white" href="home.html">{ The GitHub API }</a>
 			</div>
+			<!-- End: Navbrand -->
+
 			<!-- Begin: Navtabs -->
-			<div class="border border-secondary w-50">
-				<nav class="m-nav" style="width: 100%;">
-					<ul class="nav nav-tabs nav-justified">
-						<li class="nav-item" id="navitem-repositories"><a class="nav-link active" href="#repo-container" id="navlink-repositories">Repositories</a></li>
-						<li class="nav-item" id="navitem-followers"><a class="nav-link text-white" href="#follower-container" id="navlink-followers">Followers</a></li>
-						<li class="nav-item" id="navitem-following"><a class="nav-link text-white" href="#following-container" id="navlink-following">Following</a></li>
-					</ul>
-				</nav>
+			<div class="flex-fill border-top border-start border-end border-secondary rounded">
+				<ul class="nav nav-tabs flex-column flex-sm-row">
+					<li class="nav-item flex-sm-fill text-sm-center" id="navitem-repositories"><a class="nav-link active" href="#repo-container" id="navlink-repositories">Repositories</a></li>
+					<li class="nav-item flex-sm-fill text-sm-center" id="navitem-followers"><a class="nav-link text-white" href="#follower-container" id="navlink-followers">Followers</a></li>
+					<li class="nav-item flex-sm-fill text-sm-center" id="navitem-following"><a class="nav-link text-white" href="#following-container" id="navlink-following">Following</a></li>
+				</ul>
 			</div>
 			<!-- End: Navtabs -->
-			<div class="d-flex align-items-center text-white">
-				<span class="border-bottom" id="navbar-username"></span>
-				<img src="" id="navbar-photo" class="mx-2 border border-2 rounded-circle" alt="..." style="width: 30px;">
+			
+			<!-- Begin: Navlogin -->
+			<div class="flex-fill d-flex justify-content-center justify-content-md-end align-items-center text-white">
+				<span class="border-bottom text-capitalize" id="navbar-username"></span>
+				<img src="" id="navbar-photo" class="ms-2 border border-2 rounded-circle" alt="..." style="width: 30px;">
 			</div>
+			<!-- End: Navlogin -->
+
 		</nav>
 		<!-- End: Header -->
 		
 		<!-- Begin: Main Container -->
-		<div class="d-flex" style="height: 91vh;">
+		<div class="main-container d-flex flex-sm-column flex-md-row flex-wrap flex-md-nowrap">
 
 			<!-- Begin: Profile Overview Section -->
-			<div class="profile-overview border-end text-light" id="profile-overview">
+			<div class="profile-overview border-end px-4 pt-4 text-light" id="profile-overview">
 
 				<!-- Begin: Profile -->
-				<div class="card bg-dark text-light mt-4 mx-4">
+				<div class="card bg-dark text-light">
 					<div class="bg-dark bg-gradient d-flex justify-content-center">
 						<img src="" id="profile-photo" alt="profile photo" style="width:15em">
 					</div>
 					<div class="card-body bg-gradient">
-						<h5 class="card-title d-flex align-items-center mt-2 mb-3"><span class="me-2" id="profile-name"></span><small class="opacity-75 fw-light">[ <span id="profile-username"></span> ]</small></h5>
-						<span class="" id="profile-bio"></span>
+						<h5 class="card-title d-flex flex-wrap my-2"><span class="me-2" id="profile-name"></span><small class="opacity-75 fw-light">[ <span id="profile-username"></span> ]</small></h5>
+						<span class="mt-1" id="profile-bio"></span>
 					</div>
 					<ul class="list-group ps-1">
 						<li class="list-group-item bg-dark text-white"><i class="bi bi-people-fill me-2"></i><span id="profile-followers"></span> Followers</li>
@@ -89,18 +95,18 @@
 			<!-- End: Profile Overview Section -->
 
 			<!-- Begin: Full Profile -->
-			<div class="full-profile flex-fill overflow-auto">
+			<div class="full-profile flex-fill px-4 overflow-auto">
 
 				<!-- Begin: Repositories -->
-				<div class="repo-container pt-4 px-4" id="repo-container"></div>
+				<section class="repo-container pt-4" id="repo-container"></section>
 				<!-- End: Repositories -->
 
 				<!-- Begin: Followers -->
-				<div class="follower-container pt-4 px-4" id="follower-container"></div>
+				<section class="follower-container pt-4" id="follower-container"></section>
 				<!-- End: Followers -->
 
 				<!-- Begin: Followings -->
-				<div class="following-container pt-4 px-4" id="following-container"></div>
+				<section class="following-container pt-4" id="following-container"></section>
 				<!-- End: Followings -->
 
 			</div>
