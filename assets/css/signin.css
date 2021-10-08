@@ -11,3 +11,9 @@ body {
   max-width: 400px;
   margin: auto;
 }
+
+.copyright-username:hover {
+  color: hotpink !important;
+  border-bottom: 1px dotted hotpink;
+  transition: ease-in-out 400ms;
+}

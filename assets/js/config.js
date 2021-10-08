@@ -2,13 +2,16 @@ console.log("Here, I am : config.js");
 
 // username of github user
 let username;
-if(localStorage.getItem('GitHub_Username')) {
-    username = localStorage.getItem('GitHub_Username');
-}
-else {
+if(sessionStorage.getItem('GitHub_Username')) {
     username = sessionStorage.getItem('GitHub_Username');
 }
+else {
+    username = localStorage.getItem('GitHub_Username');
+}
 console.log("Config Username :", username);
+
+// number of times, fetch api can requests for data from "GitHub API"
+const requestLimit = 40;
 
 // function to fetch user data from api
 function getData(username) {

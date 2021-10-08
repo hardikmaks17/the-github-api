@@ -21,6 +21,11 @@
 
 /* End - Header Part */
 
+/* Begin - Common Part */
+    .bi, .fas, .far {
+        user-select: none;
+    }
+/* End - Common Part */
 
 /* Begin - Main Part */
 
@@ -45,10 +50,12 @@
                 padding: 1em;
             }
             .m-navbar > * {
-                border: 1px solid #fff;
                 width: 100%;
                 margin: 0.5em 0;
                 text-align: center;
+            }
+            .m-navbar > :first-child {
+                border: 1px solid #fff;
             }
             .profile-overview {
                 border: unset !important;
